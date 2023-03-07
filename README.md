@@ -6,3 +6,4 @@ Component Modal project is to be used in other projects that will require a moda
 
 - React.js
 - React Hook Form
+- Styled Components
