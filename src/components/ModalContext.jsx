@@ -33,7 +33,7 @@ export default function ModalContent({onClose}){
             <div className="modal--form">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input type="text" name="title" id="task--title" {...register('title')}/>
-                    <input type="submit" name="submit"/>
+                    <input type="submit" value="submit"/>
                 </form>
             </div>
         </div>
