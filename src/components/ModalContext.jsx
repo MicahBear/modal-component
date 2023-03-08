@@ -1,3 +1,5 @@
+import { useForm } from "react-hook-form"
+
 const MODAL_STYLES = {
   position: 'fixed',
   top: '50%',
@@ -19,13 +21,21 @@ const OVERLAY_STYLES = {
 }
 
 export default function ModalContent({onClose}){
+    const {register, handleSubmit, reset} = useForm()
+    const onSubmit = (data) =>{
+      console.log(data)
+        reset()
+      onClose()
+    }
     return(
         <div style={OVERLAY_STYLES} className="modal">
         <div  style ={MODAL_STYLES} className="modal-container">
-            <div  className="modal--title">
-                task form
+            <div className="modal--form">
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <input type="text" name="title" id="task--title" {...register('title')}/>
+                    <input type="submit" name="submit"/>
+                </form>
             </div>
-            <button onClick={onClose}>close me</button>
         </div>
         </div>
     )
