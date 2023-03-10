@@ -1,12 +1,12 @@
-import Portal from "./components/PortalModal"
+import ModalAction from "./components/ModalAction"
 
 
 function App(){
     return(
         <div className = "app-container">
             <p>testing for fun</p>
-            <div className='app--portal--container'>
-                <Portal/>
+            <div >
+                <ModalAction/>
             </div>
         </div>
     )
